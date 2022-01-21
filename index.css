@@ -1,0 +1,69 @@
+html {
+    height: 100%;
+}
+
+body {
+    overflow: hidden;
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body{
+background: rgb(0,255,235);
+background: linear-gradient(180deg, rgba(0,255,235,1) 4%, rgba(0,5,255,1) 91%);
+font-family: Arial;
+}
+
+div{
+font-size: 50px;
+margin-top: 150px;
+}
+
+#sub{
+  font-family: 'Roboto', sans-serif;
+}
+
+#til{
+font-family: 'Open Sans', sans-serif;
+}
+
+#yt{
+ text-decoration: none;
+ background: linear-gradient(-45deg, red, blue);
+ background-size: 800% 400%;
+ padding: 1em 2em;
+ display: inline-block;
+ border: none;
+ border-radius: 10px;
+ font-size: 20px;
+ font-weight: 700;
+ color: white;
+ transition: all .5s ease-in-out;
+ animation: gradient 4s infinite cubic-bezier(.62, .28, .23, .99) both;
+}
+
+a:hover {
+ animation: gradient 3s infinite;
+ transform: scale(1.05);
+}
+
+a:active {
+ animation: gradient 3s infinite;
+ transform: scale(0.8);
+}
+
+@keyframes gradient {
+ 0% {
+  background-position: 0% 50%;
+ }
+
+ 50% {
+  background-position: 100% 50%;
+ }
+
+ 100% {
+  background-position: 0% 50%;
+ }
+}
