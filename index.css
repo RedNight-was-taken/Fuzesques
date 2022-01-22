@@ -11,6 +11,8 @@ body {
 }
 
 body{
+  animation-name: fadeInUp;
+  animation-delay: 1s;
 background: rgb(0,255,235);
 background: linear-gradient(180deg, rgba(0,255,235,1) 4%, rgba(0,5,255,1) 91%);
 font-family: Arial;
@@ -21,11 +23,69 @@ font-size: 50px;
 margin-top: 150px;
 }
 
+.fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both
+}
+
+.animatedFadeInUp {
+    opacity: 0
+}
+
+.fadeInUp {
+    opacity: 0;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: black;
+  background: white;
+}
+
+::selection {
+  color: black;
+  background: white;
+}
+
 #sub{
-  font-family: 'Roboto', sans-serif;
+  animation-name: fadeInUp;
+  animation-delay: 1s;
+  font-family: 'Signika', sans-serif;
 }
 
 #til{
+animation-name: fadeInUp;
+animation-delay: 1s;
 font-family: 'Open Sans', sans-serif;
 }
 

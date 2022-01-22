@@ -3,10 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>Messages - Fuzesques</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Signika:wght@500&display=swap" rel="stylesheet">
   </head>
   <body>
 
-    <div id="container">
+    <div class="animated animatedFadeInUp fadeInUp" id="container">
 
       <div id="title_container">
         <h2 style="font-size: 70px" id="mail"> ✉</h2>
@@ -17,9 +20,9 @@
         <textarea placeholder="Votre E-mail" type="text" id="email"></textarea>
         <textarea id="yo" placeholder="Votre message..." style="height: 125px"></textarea>
       </div>
-      <p style="text-align: center; font-family: Arial;" id="att">⚠️ Merci de renseigner une email valide,<br>la reponse vous serat envoye dessus.</p>
+      <p style="text-align: center; font-family: 'Signika', sans-serif;" id="att">⚠️ Merci de renseigner une email valide,<br>la reponse vous serat envoye dessus.</p>
       <div id="button_container">
-        <button id="submit" onclick="save()"> envoyer </button>
+        <button id="submit" onclick="save()"> ENVOYER </button>
       </div>
 
     </div>
@@ -40,27 +43,52 @@
       align-items: center;
     }
     #email{
-      font-family: arial;
+      font-family: 'Signika', sans-serif;
     }
 #yo,#username,#email{
-  font-family: arial;
+  font-family: 'Signika', sans-serif;
 }
 
-    @keyframes fadeIn {
-      0% {
-    opacity: 0;
-}
-100% {
-    opacity: 1;
-}
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
     }
 
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both
+}
+
+.animatedFadeInUp {
+    opacity: 0
+}
+
+.fadeInUp {
+    opacity: 0;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+}
+
     #container {
-      animation: fadeIn 1s;
-      -webkit-animation: fadeIn 1s;
-      -moz-animation: fadeIn 1s;
-      -o-animation: fadeIn 1s;
-      -ms-animation: fadeIn 1s;
       width: 35%;
       height: 450px;
 
@@ -92,6 +120,16 @@
       margin-bottom: 50px;
 
       color: #003049;
+    }
+
+    ::-moz-selection { /* Code for Firefox */
+      color: orange;
+      background: blue;
+    }
+
+    ::selection {
+      color: orange;
+      background: black;
     }
 
     #form_container {
@@ -131,14 +169,14 @@
       float: left;
       margin-bottom: 50px;
 
-      font-family: Verdana;
+      font-family: 'Signika', sans-serif;
 
     }
 
     #submit {
       width: 25%;
       height: 35px;
-
+      font-family: 'Signika', sans-serif;
       background-color: #D62828;
       border-radius: 5px;
       font-weight: bold;
